@@ -1,0 +1,368 @@
+/* || Media Queries */
+
+@media (max-width: 1200px) {
+	html { font-size: 15px; }
+}
+@media (max-width: 1100px) {
+	html { font-size: 14px; }
+	.project-description {
+		font-size: 1.6rem;
+	}
+}
+
+@media (max-width: 900px) {
+
+/* Header Grid Areas */
+	header {
+		height: 100vh;
+	}
+	.header-area-1 {
+		grid-column-end: 25;
+		grid-row-start: 7;
+		grid-row-end: 18;
+		justify-content: center;
+		padding-top: 4rem;
+	}
+	.header-area-2 {
+		grid-column-start: 1;
+		grid-column-end: 25;
+		grid-row-start: 1;
+		grid-row-end: 7;
+	}
+	.header-area-3 {
+		grid-column-start: 1;
+		grid-column-end: 13;
+		grid-row-start: 18;
+		grid-row-end: 25;
+	}
+	.header-area-4 {
+		grid-column-start: 13;
+		grid-column-end: 25;
+		grid-row-start: 18;
+		grid-row-end: 25;
+	}
+	.about-header-grid {
+		height: 110vh;
+	}
+
+/* Header Contents */
+
+	.sidebar {
+		flex-direction: row;
+		margin-right: 0;
+		position: fixed;
+		transform: translate3d(100vw,0,0);
+		bottom: 2rem;
+		transition: $default-timing;
+		z-index: 300;
+		display: block;
+	}
+	.sidebar.active {
+		transform: translate3d(0,0,0);
+	}
+	.sidebar-title, .sidebar-divider {
+		display: none;
+	}
+	.social-icon img {
+		margin: 0 $default-spacing;
+		vertical-align: middle;
+		width: 2rem;
+	}
+	.down-arrow {
+		grid-column-start: 20;
+		grid-column-end: 23;
+		grid-row-start: 6;
+		grid-row-end: 8;
+	}
+	.title {
+		grid-row-start: 8;
+		grid-column-start: 1;
+		grid-column-end: 25;
+		top: 0;
+		width: 100%;
+		align-self: flex-start;
+	}
+	h2 {
+		font-size: 6rem;
+		letter-spacing: -.1rem;
+		white-space: normal;
+	}
+	.project-navigation img {
+		height: 4rem;
+	}
+	.down-arrow-home::after {
+		display: none;
+	}
+
+/* Hamburger Menu */
+
+	nav {
+		grid-column-end: 25;
+		justify-content: space-between;
+	}
+	ul .nav-link {
+		font-size: 2rem;
+		line-height: 150%;
+	}
+	.nav-item {
+		padding: 2rem 0;
+		border-top: 1px solid rgba(128, 128, 128, .2);
+	}
+    .menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+		text-align: center;
+        width: 100%;
+		height: 100vh;
+        transition: $default-timing;
+        padding-top: 6rem;
+    }
+    .menu.active {
+        right: 0;
+    }
+	.hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 200;
+    }
+	.hamburger.active {
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+	html {
+		overflow: auto;
+	}
+	html.active {
+		overflow: hidden;
+	}
+
+/* Hamburger Menu - Background Colors/Transitions */
+
+	.menu-bg-home {
+		background-color: $home1;
+	}
+	html.to-homelink, html.to-projectslink {
+        .menu {
+		    background-color: $home1;
+		    transition: $default-timing;
+        }
+	}
+	.menu-bg-about {
+		background-color: $home1;
+	}
+	html.to-aboutlink .menu {
+		background-color: $home1;
+		transition: $default-timing;
+	}
+    html.to-projectslink .menu {
+		background-color: $home1;
+		transition: $default-timing;
+	}
+	.menu-bg-chess {
+		background-color: $chess1;
+	}
+	html.to-chesslink .menu {
+		background-color: $chess1;
+		transition: $default-timing;
+	}
+	.menu-bg-eatstreet {
+		background-color: $eatstreet1;
+	}
+	html.to-eatstreetlink .menu {
+		background-color: $eatstreet1;
+		transition: $default-timing;
+	}
+	.menu-bg-hotel {
+		background-color: $hotel1;
+	}
+	html.to-hotellink .menu {
+		background-color: $hotel1;
+		transition: $default-timing;
+	}
+	.menu-bg-mad-hops {
+		background-color: $madhops1;
+	}
+	html.to-mad-hopslink .menu {
+		background-color: $madhops1;
+		transition: $default-timing;
+	}
+	.menu-bg-mcloons {
+		background-color: $mcloons1;
+	}
+	html.to-mcloonslink .menu {
+		background-color: $mcloons1;
+		transition: $default-timing;
+	}
+	.menu-bg-number-two {
+		background-color: $numbertwo1;
+	}
+	html.to-number-twolink .menu {
+		background-color: $numbertwo1;
+		transition: $default-timing;
+	}
+	.menu-bg-illustration {
+		background-color: $illustration1;
+	}
+	html.to-illustrationlink .menu {
+		background-color: $illustration1;
+		transition: $default-timing;
+	}
+	.menu-bg-animation {
+		background-color: $animation1;
+	}
+	html.to-animationlink .menu {
+		background-color: $animation1;
+		transition: $default-timing;
+	}
+
+/* About Page Specific */
+
+	.header-area-about-1 {
+		grid-column-start: 1;
+		grid-column-end: 25;
+		grid-row-start: 18;
+		grid-row-end: 25;
+		justify-content: center;
+	}
+	.header-area-about-2 {
+		grid-column-start: 1;
+		grid-column-end: 25;
+		grid-row-start: 1;
+		grid-row-end: 18;
+	}
+	.title-about {
+		align-self: flex-start;
+	}
+
+/* Hotel Page Specific */
+
+	.hotel-header-bg {
+		background-position: top center;
+	}
+
+
+/* Showcase */
+
+	.mobile-one-column {
+		grid-column-end: span 12;
+	}
+	.mobile-two-column {
+		grid-column-end: span 6;
+	}
+	.mobile-three-column {
+		grid-column-end: span 4;
+	}
+	.mobile-four-column {
+		grid-column-end: span 3;
+	}
+	.flex-center {
+		display: block;
+	}
+	.inset-deep {
+		padding: $default-spacing;
+	}
+	.flush-bottom {
+		padding-bottom: 0;
+	}
+	.flush-top {
+		padding-top: 0;
+	}
+	.inset-vertical {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+	.inset-square {
+		padding: 6rem;
+	}
+	.showcase-headline {
+		padding: 4rem 2rem 2rem;
+	}
+	.mobile-no-inset {
+		padding: 0;
+	}
+	.pad-top-3-2 {
+		padding-top: 2rem;
+	}
+	.side-by-side div:first-of-type {
+		padding-bottom: 0;
+	}
+	.two-column-center, .two-thirds-center {
+		grid-column-start: 1;
+	}
+	.project-description {
+		text-align: left;
+	}
+	.masonry-right div:nth-child(1) {
+		order: 2;
+	}
+	.masonry-right div:nth-child(2) {
+		order: 1;
+	}
+	.masonry-right div:nth-child(3) {
+		order: 3;
+	}
+	.masonry-right div:nth-child(4) {
+		order: 4;
+	}
+
+/* Footer Navigation */
+
+	.footer-nav {
+		justify-content: flex-end;
+        .project-nav-logo {
+            height: 4rem;
+        }
+        .project-nav-logo {
+            height: 4rem;
+        }
+        .project-navigation {
+            font-size: 1.25rem;
+            display: block;
+        }
+        a {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .long-arrow-right, .long-arrow-left {
+            display: block;
+        }
+	}
+
+/* Transitions */
+
+	.transition-wipe {
+		transform: translate3d(0,100%,0);
+	}
+	html.is-changing .transition-wipe {
+		transform: translate3d(0,-100%,0);
+	}
+	html.is-animating .transition-wipe {
+		transform: translate3d(0,0,0);
+	}
+	ul .nav-link:hover::after {
+		transform: scaleX(0);
+	}
+}
+
+@media (max-width: 600px) {
+	html { font-size: 13px; }
+	h2 { font-size: 4rem;}
+}
+
+@media (max-height: 550px) {
+	.sidebar-title, .sidebar-divider, .down-arrow-home::after {
+		display: none;
+	}
+	.project-navigation img {
+		height: 3rem;
+	}
+}

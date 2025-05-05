@@ -1,0 +1,35 @@
+html {
+	font-size: 100%;
+	overflow-x: hidden;
+	scrollbar-color: #312E2B #111111;
+	background-color: #111111;
+}
+
+@import 'variables';
+@import 'page-colors';
+@import 'transitions';
+@import 'showcase';
+@import 'header';
+@import 'projects';
+@import 'hover';
+@import 'menu';
+@import 'sidebar';
+@import 'contact';
+@import 'mediaqueries';
+
+@import url('clash-display.css');
+@import url('supreme.css');
+
+.preloader {
+	align-items: center;
+	background: $home1;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+	transition: opacity 300ms linear;
+	width: 100%;
+	z-index: 9999;
+  }

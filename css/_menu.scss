@@ -1,0 +1,37 @@
+nav {
+	display: flex;
+	align-items: center;
+	grid-column-start: 1;
+	grid-column-end: 21;
+	grid-row-start: 1;
+	padding: $default-spacing;
+	height: 100%;
+	z-index: 100;
+}
+.jm-logo {
+	width: 50px;
+	margin-right: $default-spacing;
+	z-index: 200;
+}
+.menu {
+	display: flex;
+}
+ul .nav-link {
+	font-size: 1rem;
+	letter-spacing: .05rem;
+	line-height: 1.25rem;
+	position: relative;
+	display: block;
+	margin: 0 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: filter $default-timing, transform 250ms ease-in-out, opacity 250ms ease-in-out;
+    background-color: #FFFFFF;
+}

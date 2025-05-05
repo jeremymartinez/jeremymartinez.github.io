@@ -1,0 +1,62 @@
+/**
+* @license
+*
+* Font Family: Supreme
+* Designed by: Jérémie Hornus, Ilya Naumoff
+* URL: https://www.fontshare.com/fonts/supreme
+* © 2025 Indian Type Foundry
+*
+* Supreme Thin 
+* Supreme ThinItalic 
+* Supreme Extralight 
+* Supreme ExtralightItalic 
+* Supreme Light 
+* Supreme LightItalic 
+* Supreme Regular 
+* Supreme Italic 
+* Supreme Medium 
+* Supreme MediumItalic 
+* Supreme Bold 
+* Supreme BoldItalic 
+* Supreme Extrabold 
+* Supreme ExtraboldItalic 
+* Supreme Variable (Variable font)
+* Supreme VariableItalic (Variable font)
+
+*
+*/
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 800.0;
+*
+* available axes:
+'wght' (range from 100.0 to 800.0
+*/
+@font-face {
+  font-family: 'Supreme-Variable';
+  src: url('../fonts/Supreme-Variable.woff2') format('woff2'),
+       url('../fonts/Supreme-Variable.woff') format('woff'),
+       url('../fonts/Supreme-Variable.ttf') format('truetype');
+  font-weight: 100 800;
+  font-display: block;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 800.0;
+*
+* available axes:
+'wght' (range from 100.0 to 800.0
+*/
+@font-face {
+  font-family: 'Supreme-VariableItalic';
+  src: url('../fonts/Supreme-VariableItalic.woff2') format('woff2'),
+       url('../fonts/Supreme-VariableItalic.woff') format('woff'),
+       url('../fonts/Supreme-VariableItalic.ttf') format('truetype');
+  font-weight: 100 800;
+  font-display: block;
+  font-style: italic;
+}
+

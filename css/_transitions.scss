@@ -1,0 +1,323 @@
+/* || Transition - Fades */
+
+%fadeIn {
+    opacity: 1;
+	transition: $default-timing;
+}
+%fadeOut {
+    opacity: 0;
+	transition: $default-timing;
+}
+
+.transition-fade {
+    @extend %fadeIn;
+}
+.transition-fade-down, .transition-fade-up, .transition-fade-right, .transition-fade-left {
+	@extend %fadeIn;
+	transform: translate3d(0,0,0);
+}
+html.is-animating {
+    .transition-fade {
+        opacity: 0;
+    }
+    .transition-fade-down {
+	    opacity: 0;
+	    transform: translate3d(0,-1rem,0);
+    }
+    .transition-fade-up {
+        opacity: 0;
+        transform: translate3d(0,1rem,0);
+    }
+    .transition-fade-right {
+        opacity: 0;
+        transform: translate3d(-1rem,0,0);
+    }
+    .transition-fade-left {
+        opacity: 0;
+        transform: translate3d(1rem,0,0);
+    }
+}
+html.is-leaving {
+    .transition-fade-down, .transition-fade-up, .transition-fade-right, .transition-fade-left {
+	    opacity: 0;
+	    transform: translate3d(0,0,0);
+    }
+}
+
+/* || Transition - Wipe */
+
+.transition-wipe {
+	transform: translate3d(-100%,0,0);
+	transition: 1ms;
+}
+html.is-changing .transition-wipe {
+	transform: translate3d(100%,0,0);
+	transition: $default-timing;
+}
+html.is-animating .transition-wipe {
+	transform: translate3d(0,0,0);
+	transition: $default-timing;
+}
+
+/* || Transitions - Footer - Fade header when clicking bottom nav link */
+
+html.to-toplink.is-animating header {
+	opacity: 0;
+}
+
+/* || Transitions - Down Arrow */
+
+html.is-leaving .down-arrow-home::after {
+    @extend %fadeOut;
+}
+
+/* Transitions - Home */
+
+html.to-homelink {
+    .to-home-bg-1 {
+	    background-color: $home1;
+    }
+    .to-home-bg-2 {
+        background-color: $home2;
+    }
+    .to-home-bg-3 {
+        background-color: $home3;
+    }
+    .to-home-bg-4 {
+        background-color: $home4;
+    }
+}
+
+/* Transitions - About */
+
+html.to-aboutlink {
+    .to-about-bg {
+	    background-color: $home1;
+        transition: $default-timing;
+    }
+    .down-arrow, #next, #last {
+        @extend %fadeOut;
+    }
+}
+
+/* Transitions - Contact */
+
+html.to-contactlink {
+    .to-contact-bg-1 {
+	    background-color: $home1;
+    }
+    .to-contact-bg-2 {
+        background-color: $home2;
+    }
+    .to-contact-bg-3 {
+        background-color: $home3;
+    }
+    .to-contact-bg-4 {
+        background-color: $home4;
+    }
+    .down-arrow {
+        @extend %fadeOut;
+    }
+}
+
+/* || Transitions - Projects */
+
+html.to-projectslink {
+    .header-area-1, .header-area-2, .header-area-3, .header-area-4, .down-arrow, .header-area-about-1, .header-area-about-2, .overlay {
+	    background-color: $home1;
+	    transition: $default-timing;
+    }
+    .sidebar, .down-arrow, #next, #last {
+        @extend %fadeOut;
+    }
+}
+
+/* || Transitions - Chess */
+
+html.to-chesslink {
+    .to-chess-bg-1 {
+	    background-color: $chess1;
+    }
+    .to-chess-bg-2 {
+        background-color: $chess2;
+    }
+    .to-chess-bg-3 {
+        background-color: $chess3;
+    }
+    .to-chess-bg-4 {
+        background-color: $chess4;
+    }
+}
+
+/* || Transitions - EatStreet */
+
+html.to-eatstreetlink {
+    .to-eatstreet-bg-1 {
+	    background-color: $eatstreet1;
+    }
+    .to-eatstreet-bg-2 {
+        background-color: $eatstreet2;
+    }
+    .to-eatstreet-bg-3 {
+        background-color: $eatstreet3;
+    }
+    .to-eatstreet-bg-4 {
+        background-color: $eatstreet4;
+    }
+}
+
+/* Transitions - @hotel */
+
+html.to-hotellink {
+    .to-hotel-bg-1 {
+	    background-color: $hotel1;
+    }
+    .to-hotel-bg-2 {
+        background-color: $hotel2;
+    }
+    .to-hotel-bg-3 {
+        background-color: $hotel3;
+    }
+    .to-hotel-bg-4 {
+        background-color: $hotel4;
+    }
+}
+
+/* Transitions - Mad Hops */
+
+html.to-mad-hopslink {
+    .to-mad-hops-bg-1 {
+	    background-color: $madhops1;
+    }
+    .to-mad-hops-bg-2 {
+        background-color: $madhops2;
+    }
+    .to-mad-hops-bg-3 {
+        background-color: $madhops3;
+    }
+    .to-mad-hops-bg-4 {
+        background-color: $madhops4;
+    }
+}
+
+/* Transitions - McLoons */
+
+html.to-mcloonslink {
+    .to-mcloons-bg-1 {
+	    background-color: $mcloons1;
+    }
+    .to-mcloons-bg-2 {
+        background-color: $mcloons2;
+    }
+    .to-mcloons-bg-3 {
+        background-color: $mcloons3;
+    }
+    .to-mcloons-bg-4 {
+        background-color: $mcloons4;
+    }
+}
+
+/* Transitions - Number Two */
+
+html.to-number-twolink {
+    .to-number-two-bg-1 {
+	    background-color: $numbertwo1;
+    }
+    .to-number-two-bg-2 {
+        background-color: $numbertwo2;
+    }
+    .to-number-two-bg-3 {
+        background-color: $numbertwo3;
+    }
+    .to-number-two-bg-4 {
+        background-color: $numbertwo4;
+    }
+}
+
+/* Transitions - Illustration */
+
+html.to-illustrationlink {
+    .to-illustration-bg-1 {
+	    background-color: $illustration1;
+    }
+    .to-illustration-bg-2 {
+        background-color: $illustration2;
+    }
+    .to-illustration-bg-3 {
+        background-color: $illustration3;
+    }
+    .to-illustration-bg-4 {
+        background-color: $illustration4;
+    }
+}
+
+/* Transitions - Animation */
+
+html.to-animationlink {
+    .to-animation-bg-1 {
+	    background-color: $animation1;
+    }
+    .to-animation-bg-2 {
+        background-color: $animation2;
+    }
+    .to-animation-bg-3 {
+        background-color: $animation3;
+    }
+    .to-animation-bg-4 {
+        background-color: $animation4;
+    }
+}
+
+/* Transitions - Light Dark Switch */
+
+html.to-chesslink, html.to-eatstreetlink, html.to-mcloonslink, html.to-mad-hopslink, html.to-number-twolink, html.to-animationlink {
+    ul .nav-link, .sidebar-title, .project-navigation {
+        color: $white;
+	    transition: $default-timing;
+    }
+    .header-light img, .header-light .bar {
+        filter: brightness(100%);
+    }
+    .header-light img {
+        transition: $default-timing;
+    }
+    .sidebar-divider, .long-arrow-left::after, ul .nav-link::after, .long-arrow-right::after {
+        background-color: $white;
+	    transition: $default-timing;
+    }
+    .long-arrow-left, .long-arrow-right {
+        border-top: 1px solid $white;
+	    border-left: 1px solid $white;
+	    transition: $default-timing;
+    }
+}
+
+html.to-homelink, html.to-aboutlink, html.to-projectslink, html.to-contactlink, html.to-illustrationlink, html.to-hotellink {
+    ul .nav-link, .sidebar-title, .project-navigation {
+        color: $dark;
+        transition: $default-timing;
+    }
+    .header-dark img, .header-dark .bar {
+        filter: brightness(14%);
+    }
+    .header-dark img {
+        transition: $default-timing;
+    }
+    .sidebar-divider, .long-arrow-left::after, ul .nav-link::after, .long-arrow-right::after {
+        background-color: $dark;
+        transition: $default-timing;
+    }
+    .long-arrow-left, .long-arrow-right {
+        border-top: 1px solid $dark;
+        border-left: 1px solid $dark;
+        transition: $default-timing;
+    }
+}
+
+/* || Stop Transitions on Window Resize */
+@media (min-width: 900px) {
+    .resize-animation-stopper * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
